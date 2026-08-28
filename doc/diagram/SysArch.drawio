@@ -1,0 +1,68 @@
+flowchart LR
+
+    C[Customer]
+
+    R[Restaurant Admin]
+
+    D[Delivery Partner]
+
+    subgraph FRONTEND[Frontend]
+        UI[Web / Mobile Application]
+    end
+
+    subgraph BACKEND[Spring Boot Backend]
+        API[REST API]
+
+        AUTH[Authentication and Authorization]
+
+        REST[Restaurant Management]
+
+        MENU[Menu Management]
+
+        CART[Cart Management]
+
+        ORD[Order Management]
+
+        PAY[Payment Management]
+
+        DEL[Delivery Management]
+
+        NOTI[Notification Service]
+    end
+
+    DB[(MySQL Database)]
+
+    PG[Payment Gateway]
+
+    NS[Email / SMS Notification]
+
+    C --> UI
+    R --> UI
+    D --> UI
+
+    UI --> API
+
+    API --> AUTH
+    API --> REST
+    API --> MENU
+    API --> CART
+    API --> ORD
+    API --> PAY
+    API --> DEL
+    API --> NOTI
+
+    AUTH --> DB
+    REST --> DB
+    MENU --> DB
+    CART --> DB
+    ORD --> DB
+    PAY --> DB
+    DEL --> DB
+    NOTI --> DB
+
+    PAY --> PG
+
+    NOTI --> NS
+
+    ORD --> DEL
+    ORD --> NOTI
