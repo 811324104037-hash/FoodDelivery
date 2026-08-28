@@ -1,0 +1,103 @@
+Table Users {
+  user_id int [pk, increment]
+  name varchar
+  email varchar
+  password varchar
+  phone varchar
+  role varchar
+}
+
+Table Restaurants {
+  restaurant_id int [pk, increment]
+  owner_id int
+  name varchar
+  address varchar
+  phone varchar
+  description varchar
+  is_active boolean
+}
+
+Table MenuItems {
+  menu_item_id int [pk, increment]
+  restaurant_id int
+  name varchar
+  description varchar
+  price decimal
+  category varchar
+  is_available boolean
+}
+
+Table Carts {
+  cart_id int [pk, increment]
+  customer_id int
+  total_amount decimal
+}
+
+Table CartItems {
+  cart_item_id int [pk, increment]
+  cart_id int
+  menu_item_id int
+  quantity int
+  price decimal
+}
+
+Table Orders {
+  order_id int [pk, increment]
+  customer_id int
+  restaurant_id int
+  order_date datetime
+  total_amount decimal
+  order_status varchar
+  delivery_address varchar
+}
+
+Table OrderItems {
+  order_item_id int [pk, increment]
+  order_id int
+  menu_item_id int
+  quantity int
+  price decimal
+}
+
+Table Payments {
+  payment_id int [pk, increment]
+  order_id int
+  amount decimal
+  payment_method varchar
+  payment_status varchar
+  transaction_id varchar
+  payment_date datetime
+}
+
+Table Deliveries {
+  delivery_id int [pk, increment]
+  order_id int
+  delivery_partner_id int
+  pickup_time datetime
+  delivery_time datetime
+  delivery_status varchar
+}
+
+Ref: Users.user_id < Restaurants.owner_id
+
+Ref: Restaurants.restaurant_id < MenuItems.restaurant_id
+
+Ref: Users.user_id - Carts.customer_id
+
+Ref: Carts.cart_id < CartItems.cart_id
+
+Ref: MenuItems.menu_item_id < CartItems.menu_item_id
+
+Ref: Users.user_id < Orders.customer_id
+
+Ref: Restaurants.restaurant_id < Orders.restaurant_id
+
+Ref: Orders.order_id < OrderItems.order_id
+
+Ref: MenuItems.menu_item_id < OrderItems.menu_item_id
+
+Ref: Orders.order_id - Payments.order_id
+
+Ref: Orders.order_id - Deliveries.order_id
+
+Ref: Users.user_id < Deliveries.delivery_partner_id
