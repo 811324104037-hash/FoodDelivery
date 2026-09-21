@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🍔 Foodie</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#cart">Cart 🛒</a>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome to Foodie! 👋</h2>
+        <p>Delicious food delivered to your doorstep.</p>
+    </section>
+
+
+    <!-- MENU -->
+
+    <section id="menu">
+
+        <h2>🍽️ Our Menu</h2>
+
+        <div class="food-container">
+
+            <!-- 1 -->
+            <div class="food-card">
+                <h3>🍕 Pizza</h3>
+                <p>Cheesy delicious pizza</p>
+                <h4>₹199</h4>
+                <button onclick="addToCart('Pizza', '₹199')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 2 -->
+            <div class="food-card">
+                <h3>🍔 Burger</h3>
+                <p>Fresh and tasty burger</p>
+                <h4>₹149</h4>
+                <button onclick="addToCart('Burger', '₹149')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 3 -->
+            <div class="food-card">
+                <h3>🍗 Chicken Biryani</h3>
+                <p>Spicy chicken biryani</p>
+                <h4>₹229</h4>
+                <button onclick="addToCart('Chicken Biryani', '₹229')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 4 -->
+            <div class="food-card">
+                <h3>🍝 Pasta</h3>
+                <p>Creamy delicious pasta</p>
+                <h4>₹179</h4>
+                <button onclick="addToCart('Pasta', '₹179')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 5 -->
+            <div class="food-card">
+                <h3>🌯 Shawarma</h3>
+                <p>Juicy chicken shawarma</p>
+                <h4>₹159</h4>
+                <button onclick="addToCart('Shawarma', '₹159')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 6 -->
+            <div class="food-card">
+                <h3>🍟 French Fries</h3>
+                <p>Crispy golden fries</p>
+                <h4>₹99</h4>
+                <button onclick="addToCart('French Fries', '₹99')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 7 -->
+            <div class="food-card">
+                <h3>🥪 Sandwich</h3>
+                <p>Fresh vegetable sandwich</p>
+                <h4>₹129</h4>
+                <button onclick="addToCart('Sandwich', '₹129')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 8 -->
+            <div class="food-card">
+                <h3>🍜 Noodles</h3>
+                <p>Hot and spicy noodles</p>
+                <h4>₹149</h4>
+                <button onclick="addToCart('Noodles', '₹149')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 9 -->
+            <div class="food-card">
+                <h3>🍛 Fried Rice</h3>
+                <p>Delicious chicken fried rice</p>
+                <h4>₹169</h4>
+                <button onclick="addToCart('Fried Rice', '₹169')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 10 -->
+            <div class="food-card">
+                <h3>🍗 Chicken 65</h3>
+                <p>Spicy crispy chicken</p>
+                <h4>₹199</h4>
+                <button onclick="addToCart('Chicken 65', '₹199')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 11 -->
+            <div class="food-card">
+                <h3>🥞 Dosa</h3>
+                <p>Crispy South Indian dosa</p>
+                <h4>₹89</h4>
+                <button onclick="addToCart('Dosa', '₹89')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 12 -->
+            <div class="food-card">
+                <h3>🍕 Paneer Pizza</h3>
+                <p>Cheesy paneer loaded pizza</p>
+                <h4>₹249</h4>
+                <button onclick="addToCart('Paneer Pizza', '₹249')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 13 -->
+            <div class="food-card">
+                <h3>🍰 Chocolate Cake</h3>
+                <p>Rich chocolate cake</p>
+                <h4>₹129</h4>
+                <button onclick="addToCart('Chocolate Cake', '₹129')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 14 -->
+            <div class="food-card">
+                <h3>🥤 Cold Coffee</h3>
+                <p>Chilled creamy coffee</p>
+                <h4>₹119</h4>
+                <button onclick="addToCart('Cold Coffee', '₹119')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 15 -->
+            <div class="food-card">
+                <h3>🍦 Ice Cream</h3>
+                <p>Sweet and creamy ice cream</p>
+                <h4>₹79</h4>
+                <button onclick="addToCart('Ice Cream', '₹79')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- 16 -->
+            <div class="food-card">
+                <h3>🌮 Tacos</h3>
+                <p>Spicy crispy tacos</p>
+                <h4>₹179</h4>
+                <button onclick="addToCart('Tacos', '₹179')">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+     <section id="customerDetails">
+    <h2>👤 Customer Details</h2>
+
+    <input type="text" id="customerName" placeholder="Enter your name">
+
+    <input type="text" id="customerPhone" placeholder="Enter phone number">
+
+    <textarea id="customerAddress" placeholder="Enter delivery address"></textarea>
+</section>
+    <section id="cart">
+
+        <h2>🛒 Your Cart</h2>
+
+        <p id="emptyCart">No items added yet.</p>
+
+        <div id="cartItems"></div>
+        <h3 id="cartTotal">Total: ₹0</h3>
+        <p id="successMessage"></p>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let cartItems = [];
+
+        function addToCart(name, price) {
+
+    cartItems.push({
+        name: name,
+        price: price
+    });
+
+    alert("✅ " + name + " added to cart successfully! 🛒");
+
+    showCart();
+}
+
+
+function showCart() {
+
+    const cartItemsDiv =
+        document.getElementById("cartItems");
+
+    const emptyCart =
+        document.getElementById("emptyCart");
+
+    const cartTotal =
+        document.getElementById("cartTotal");
+
+    emptyCart.style.display = "none";
+
+    cartItemsDiv.innerHTML = "";
+
+    let total = 0;
+
+    cartItems.forEach(function(item) {
+
+        const itemText =
+            document.createElement("p");
+
+        itemText.textContent =
+            item.name + " - " + item.price;
+
+        cartItemsDiv.appendChild(itemText);
+
+        total += parseInt(item.price.replace("₹", ""));
+    });
+
+    cartTotal.textContent =
+        "Total: ₹" + total;
+
+    cartItemsDiv.innerHTML +=
+        '<br><button onclick="placeOrder()">Place Order</button>';
+}
+
+        function showCart() {
+
+            const cartItemsDiv =
+                document.getElementById("cartItems");
+
+            const emptyCart =
+                document.getElementById("emptyCart");
+
+            emptyCart.style.display = "none";
+
+            cartItemsDiv.innerHTML = "";
+
+            cartItems.forEach(function(item) {
+
+                const itemText =
+                    document.createElement("p");
+
+                itemText.innerHTML =
+    item.name + " - " + item.price +
+    ' <button onclick="removeItem(' +
+    cartItems.indexOf(item) +
+    ')">Remove</button>';
+                    
+
+                cartItemsDiv.appendChild(itemText);
+
+            });
+
+            cartItemsDiv.innerHTML +=
+                '<br><button onclick="placeOrder()">Place Order</button>';
+        }
+function removeItem(index) {
+
+    cartItems.splice(index, 1);
+
+    if (cartItems.length === 0) {
+
+        document.getElementById("emptyCart").style.display = "block";
+
+        document.getElementById("cartItems").innerHTML = "";
+
+        document.getElementById("cartTotal").textContent =
+            "Total: ₹0";
+
+        return;
+    }
+
+    showCart();
+}
+
+       function placeOrder() {
+    const customerName = document.getElementById("customerName").value;
+    const customerPhone = document.getElementById("customerPhone").value;
+    const customerAddress = document.getElementById("customerAddress").value;
+
+    if (customerName === "" || customerPhone === "" || customerAddress === "") {
+        alert("⚠️ Please enter all customer details.");
+        return;
+    }
+    const orderId = "FD" + Math.floor(100000 + Math.random() * 900000);
+
+    const orderItems = cartItems.map(item => item.name).join(", ");
+    const total = cartItems.reduce((sum, item) => {
+        return sum + parseInt(item.price.replace("₹", ""));
+    }, 0);
+
+    document.getElementById("cartItems").innerHTML = `
+        <div>
+            <h3>🧾 Order Details</h3>
+
+            <p><strong>Order ID:</strong> ${orderId}</p>
+
+            <p><strong>Items:</strong><br>
+            ${orderItems}</p>
+
+            <p><strong>Total Amount:</strong> ₹${total}</p>
+
+            <p><strong>Payment Method:</strong> Cash on Delivery</p>
+
+            <p><strong>Customer Name:</strong> ${customerName}</p>
+<p><strong>Phone:</strong> ${customerPhone}</p>
+<p><strong>Delivery Address:</strong> ${customerAddress}</p>
+
+            <p><strong>Estimated Delivery:</strong> 30 - 40 minutes</p>
+
+            <hr>
+
+            <h3>🚚 Order Status</h3>
+            <p>👨‍🍳 Your food is being prepared</p>
+            <p>🚴 Delivery partner is on the way!</p>
+
+            <button onclick="deliveryComplete()">
+                Delivery Successful
+            </button>
+        </div>
+    `;
+
+    document.getElementById("cartTotal").innerText = "Total: ₹" + total;
+} 
+
+
+        function deliveryComplete() {
+
+            document.getElementById("cart").innerHTML = `
+
+                <h2>✅ Delivery Successful!</h2>
+
+                <p>Your food has been delivered successfully.</p>
+
+                <p>Thank you for ordering with Foodie! ❤️</p>
+
+            `;
+        }
+
+    </script>
+
+</body>
+
+</html>
